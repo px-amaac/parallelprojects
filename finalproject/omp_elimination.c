@@ -74,6 +74,10 @@ int main(int argc, char* argv[]) {
 	//print_matrix(&n, &n, A);
 	//print_matrix(NULL, &n, b);
 	int j;
+	int processor_num = omp_get_num_procs();
+	//int threads_available = omp_get_num_threads();
+	printf("Number of Cores: %d\n", processor_num);
+	printf("Number of Threads: %d\n", thread_count);
 	//start timing
 	gettimeofday(&tstart, NULL);
 	for(j=0; j <n-1; ++j){
@@ -124,7 +128,7 @@ void l2norm(int* n, double* A, double* b, double* x){
 		//printf("after residual %f\n", residual[i]);
 		sum_of_sqrs += pow(residual[i], 2);
 	}
-	printf("l2norm =%f %f\n", sum_of_sqrs, sqrt(sum_of_sqrs));
+	//printf("l2norm =%f %f\n", sum_of_sqrs, sqrt(sum_of_sqrs));
 	free(residual);
 	residual = NULL;
 }
