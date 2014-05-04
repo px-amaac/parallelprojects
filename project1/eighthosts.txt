@@ -1,0 +1,8 @@
+o251-20 slots=2
+o251-21 slots=2
+o251-22 slots=2
+o251-23 slots=2
+o251-24 slots=2
+o251-25 slots=2
+o251-26 slots=2
+o251-27 slots=2
